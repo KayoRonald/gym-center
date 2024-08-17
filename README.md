@@ -1,1 +1,1 @@
-# gym-center
+# Gym Center
