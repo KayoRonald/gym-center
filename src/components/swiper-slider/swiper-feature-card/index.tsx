@@ -2,13 +2,9 @@ import { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import {
   Box,
-  Center,
   Flex,
   Heading,
-  Icon,
   Image,
-  Text,
-  chakra,
 } from "@chakra-ui/react";
 import { SwiperNavButtons } from "../swiper-nav-buttons";
 import { sliderSettings } from "../config";
