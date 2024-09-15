@@ -6,6 +6,7 @@ import {
   Flex,
   Heading,
   Icon,
+  Image,
   Text,
   chakra,
 } from "@chakra-ui/react";
@@ -36,9 +37,23 @@ export const GymSwiper = () => {
 
   return (
     <Box>
-      <Flex align="center" justify="space-between" mb={4}>
-        <Heading>Explore Our Program</Heading>
-      </Flex>
+     <Flex
+          align="center"
+          justify="space-between"
+          mb={4}
+          position="relative"
+        >
+          <Heading fontSize={{ base: "2xl", md: "4xl" }}>
+            Explore Our Program
+          </Heading>
+          <Image
+            src="/exploreProgram.svg"
+            alt="Explore Program"
+            position="absolute"
+            left={0}
+            zIndex="-1"
+          />
+        </Flex>
       <Swiper
         {...sliderSettings}
         onSlideChange={handleSlideChange}

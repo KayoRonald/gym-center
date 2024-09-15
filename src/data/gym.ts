@@ -1,17 +1,15 @@
 import { IconType } from 'react-icons';
-import { FaBoxes, FaBicycle, FaSwimmer, FaRunning, FaDumbbell } from 'react-icons/fa';
-import { GiPunch, GiMeditation } from 'react-icons/gi';
-// import { MdDance } from 'react-icons/md';
+import { FaBicycle, FaSwimmer, FaRunning, FaDumbbell, FaMusic } from 'react-icons/fa';
+import { GiPunch, GiMeditation, GiBoxingGlove } from 'react-icons/gi';
+import { GrYoga } from 'react-icons/gr';
 import { IoMdFitness } from 'react-icons/io';
 
-// Interface defining the structure of the gym activities
 export interface Igym {
   name: string;
   description: string;
-  icon: IconType; // Use IconType for react-icons
+  icon: IconType;
 }
 
-// Array of gym activities with updated icons
 export const gymData: Igym[] = [
   {
     name: 'General Gym',
@@ -21,12 +19,12 @@ export const gymData: Igym[] = [
   {
     name: 'Yoga',
     description: 'A practice that combines physical postures, breathing exercises, and meditation to enhance flexibility and mental clarity.',
-    icon: FaBoxes
+    icon: GrYoga
   },
   {
     name: 'Boxing',
     description: 'A combat sport where participants throw punches at each other, often involving rigorous training and conditioning.',
-    icon: FaBoxes
+    icon: GiBoxingGlove
   },
   {
     name: 'Cycling',
@@ -46,7 +44,7 @@ export const gymData: Igym[] = [
   {
     name: 'Dance',
     description: 'A rhythmic activity that combines movement and music, offering a fun and engaging way to improve fitness and coordination.',
-    icon: FaBoxes
+    icon: FaMusic
   },
   {
     name: 'Martial Arts',
