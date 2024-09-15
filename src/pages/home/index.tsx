@@ -13,6 +13,7 @@ import {
   Text,
 } from "@chakra-ui/react";
 import { Helmet } from "react-helmet-async";
+import { ExploreOrProgram } from "../../components/explore";
 
 const PlayIcon = createIcon({
   displayName: "PlayIcon",
@@ -119,6 +120,8 @@ export default function Home() {
           </Flex>
         </Stack>
       </Container>
+
+      <ExploreOrProgram/>
     </>
   );
 }

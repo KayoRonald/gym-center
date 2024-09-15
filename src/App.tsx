@@ -1,12 +1,12 @@
 import {
   ChakraProvider,
-  ColorModeProvider,
   ColorModeScript,
 } from "@chakra-ui/react";
 import { Helmet, HelmetProvider } from "react-helmet-async";
+import { RouterProvider } from "react-router-dom";
+import 'swiper/css'
 import customTheme from "./theme";
 import { router } from "./router/router";
-import { RouterProvider } from "react-router-dom";
 
 function App() {
   return (
