@@ -87,7 +87,7 @@ export default function NavHero() {
             </HStack>
             <ButtonGroup>
               <Button w={99}>Login</Button>
-              <Button w={132} bg="primary.100">
+              <Button w={132} bg="primary.500">
                 Register
               </Button>
             </ButtonGroup>

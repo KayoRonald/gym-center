@@ -37,7 +37,7 @@ export const FeatureCard = ({
           data-prefix="fab"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 384 512"
-          color={isActive ? "white" : "primary.100"}
+          color={isActive ? "white" : "primary.500"}
         />
       </Center>
       <chakra.h3 fontWeight="semibold" fontSize="2xl" mt={6}>

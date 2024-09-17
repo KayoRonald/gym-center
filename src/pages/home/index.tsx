@@ -11,9 +11,11 @@ import {
   Image,
   Stack,
   Text,
+  SimpleGrid,
 } from "@chakra-ui/react";
 import { Helmet } from "react-helmet-async";
 import { ExploreOrProgram } from "../../components/explore";
+import Card from "../../components/banner-card";
 
 const PlayIcon = createIcon({
   displayName: "PlayIcon",
@@ -53,8 +55,8 @@ export default function Home() {
                 size={"lg"}
                 fontWeight={"normal"}
                 px={6}
-                bg={"primary.100"}
-                _hover={{ bg: "primary.100" }}
+                bg={"primary.500"}
+                _hover={{ bg: "primary.500" }}
               >
                 Start Training
               </Button>
@@ -121,7 +123,45 @@ export default function Home() {
         </Stack>
       </Container>
 
-      <ExploreOrProgram/>
+      <ExploreOrProgram />
+
+      <Card />
+
+      <Container maxW="5xl" px={{ base: 6, md: 3 }} mb={20}>
+        <Box
+          bg="gray.700"
+          py={{ base: 10, md: 18 }}
+          px={{ base: 6, md: 8 }}
+          rounded={"md"}
+        >
+          <SimpleGrid columns={{ base: 1, md: 3 }} spacing={8}>
+            <Box gridColumn={{ base: "span 1", md: "span 2" }}>
+              <Text fontWeight={600} fontSize={"2xl"}>
+                Enhance user experience with healthy nutrition tips, support
+                resources, and social elements.
+              </Text>
+            </Box>
+            <Flex
+              align={"center"}
+              justify={{ base: "flex-start", md: "center" }}
+            >
+              <Button
+                bg={"primary.500"}
+                color={"white"}
+                px={8}
+                size={"lg"}
+                fontSize={"md"}
+                rounded={"md"}
+                _hover={{
+                  bg: "blue.700",
+                }}
+              >
+                Join Us
+              </Button>
+            </Flex>
+          </SimpleGrid>
+        </Box>
+      </Container>
     </>
   );
 }

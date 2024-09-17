@@ -30,7 +30,7 @@ export const SwiperNavButtons = () => {
         aria-label="Next Slide"
         onClick={() => swiper.slideNext()}
         mx="1"
-        bg={"primary.100"}
+        bg={"primary.500"}
       />
     </Box>
   );
