@@ -4,11 +4,9 @@ import {
   Icon,
   Stack,
   Text,
-  useColorModeValue,
 } from "@chakra-ui/react";
 import { ReactElement } from "react";
-import { IoPhonePortraitOutline } from "react-icons/io5";
-import { FaMoneyBill, FaCreditCard, FaCheck } from "react-icons/fa";
+import { FaCheck } from "react-icons/fa";
 
 interface FeatureProps {
   text: string;

@@ -4,8 +4,6 @@ import {
   Flex,
   Image,
   Button,
-  Badge,
-  Stack,
   ButtonGroup,
 } from "@chakra-ui/react";
 import { SplitWithIcon } from "./list-card";
