@@ -40,7 +40,7 @@ export default function Home() {
               fontWeight={600}
               fontSize={{ base: "3xl", sm: "4xl", lg: "6xl" }}
             >
-              <Text>Helps for your ideal body fitness</Text>
+             Helps for your ideal body fitness
             </Heading>
             <Text color={"gray.500"} fontSize={"18px"}>
               Motivate users with benefits and positive reinforcement, and offer

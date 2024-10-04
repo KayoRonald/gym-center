@@ -5,6 +5,8 @@ import {
 import { Helmet, HelmetProvider } from "react-helmet-async";
 import { RouterProvider } from "react-router-dom";
 import 'swiper/css'
+import "@fontsource/urbanist/700.css";
+import "@fontsource/poppins";
 import customTheme from "./theme";
 import { router } from "./router/router";
 

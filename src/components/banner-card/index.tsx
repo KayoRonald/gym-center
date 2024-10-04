@@ -5,23 +5,68 @@ import {
   Image,
   Button,
   ButtonGroup,
+  Container,
+  Heading,
+  Center,
 } from "@chakra-ui/react";
 import { SplitWithIcon } from "./list-card";
 
 export default function Card() {
   return (
-    <Box as="section" my={12} mx={{ base: "1rem", md: "5rem" }}>
-      <SimpleGrid columns={{ base: 1, md: 2 }} spacing={0} as="article">
-        <Flex bg="brand.400">
-          <Image
-            src={"/group.png"}
-            alt={"Hero Image"}
-            fit="cover"
-            w="full"
-            loading="lazy"
-            opacity={0.9}
-          />
+    <Box as={Container} maxW={"6xl"} my={12}>
+      <SimpleGrid
+        columns={{ base: 1, md: 2 }}
+        spacing="24px"
+        as="article"
+        gap="24px"
+      >
+        <Flex
+          position="relative"
+          height={{ base: "400px", md: "519px" }}
+          pl={3}
+          align={"center"}
+          justify={"center"}
+        >
+          <Center>
+            <Image
+              src={"/gym/woman-dumbbell-row.png"}
+              alt="Woman dumbbell row"
+              width={{ base: "250px", md: "441px" }}
+              height="301px"
+              objectFit="cover"
+              position="absolute"
+              top={{ base: "0px", md: "-0.1px" }}
+              left={{ base: "0px", md: "-0.5px" }}
+              loading="lazy"
+              opacity={0.9}
+            />
+            <Image
+              src={"/gym/man.png"}
+              alt="man"
+              width={{ base: "150px", md: "250px" }}
+              height="auto"
+              objectFit="cover"
+              position="absolute"
+              top={{ base: "80px", md: "108px" }}
+              left={{ base: "170px", md: "280px" }}
+              loading="lazy"
+              opacity={0.9}
+            />
+            <Image
+              src={"/gym/woman-overhead-press.png"}
+              alt="woman overhead press"
+              width={{ base: "220px", md: "312.50px" }}
+              height="auto"
+              objectFit="cover"
+              position="absolute"
+              top={{ base: "220px", md: "312px" }}
+              left={{ base: "50px", md: "127.5px" }}
+              loading="lazy"
+              opacity={0.9}
+            />
+          </Center>
         </Flex>
+
         <Flex
           direction="column"
           alignItems="start"
@@ -29,14 +74,17 @@ export default function Card() {
           pl={{ base: 4, md: 8, lg: 10 }}
           py={10}
         >
-          <Box
-            mb={4}
-            fontSize={{ base: "4xl", md: "4xl", lg: "5xl" }}
-            fontWeight="bold"
-            lineHeight="shorter"
-            textShadow="2px 0 currentcolor"
-          >
-            Transform your physique with our fitness plan.
+          <Box>
+            <Heading
+              as="h2"
+              mb={4}
+              fontSize={{ base: "3xl", md: "4xl", lg: "5xl" }}
+              fontWeight="bold"
+              lineHeight="shorter"
+              textShadow="2px 0 currentcolor"
+            >
+              Transform your physique with our fitness plan.
+            </Heading>
           </Box>
           <SplitWithIcon />
           <ButtonGroup>
