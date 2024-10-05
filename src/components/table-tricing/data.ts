@@ -1,0 +1,58 @@
+export const plans = [
+  {
+    name: "Basic Package",
+    monthlyPrice: "$25",
+    yearlyPrice: "$250",
+    benefits: [
+      "Unlimited Gym Access",
+      "2x Fitness Consultant",
+      "Nutrition Tracking",
+      "1x Free Supplement",
+      "3 Days per week",
+      "Personal Trainer",
+    ],
+    isHighlighted: false,
+  },
+  {
+    name: "Mid Package",
+    monthlyPrice: "$55",
+    yearlyPrice: "$550",
+    benefits: [
+      "Unlimited Gym Access",
+      "4x Fitness Consultant",
+      "Nutrition Tracking",
+      "3x Free Supplement",
+      "5 Days per week",
+      "Personal Trainer",
+    ],
+    isHighlighted: true,
+  },
+  {
+    name: "Pro Package",
+    monthlyPrice: "$75",
+    yearlyPrice: "$750",
+    benefits: [
+      "Unlimited Gym Access",
+      "7x Fitness Consultant",
+      "Nutrition Tracking",
+      "5x Free Supplement",
+      "Gym Card",
+      "Personal Trainer",
+    ],
+    isHighlighted: false,
+  },
+  {
+    name: "Athlete Package",
+    monthlyPrice: "$105",
+    yearlyPrice: "$1050",
+    benefits: [
+      "Unlimited Gym Access",
+      "Free Clothes",
+      "All Training Program",
+      "Free Fitness Consultant",
+      "Free Supplement",
+      "Gym Card",
+    ],
+    isHighlighted: false,
+  },
+];
