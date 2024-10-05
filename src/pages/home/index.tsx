@@ -16,6 +16,7 @@ import {
 import { Helmet } from "react-helmet-async";
 import { ExploreOrProgram } from "../../components/explore";
 import Card from "../../components/banner-card";
+import { PricingContent } from "../../components/table-tricing";
 
 const PlayIcon = createIcon({
   displayName: "PlayIcon",
@@ -127,7 +128,7 @@ export default function Home() {
 
       <Card />
 
-      <Container maxW="5xl" px={{ base: 6, md: 3 }} mb={20}>
+      <Container maxW="5xl" px={{ base: 6, md: 3 }} padding={'40px 20px'}>
         <Box
           bg="gray.700"
           py={{ base: 10, md: 18 }}
@@ -162,6 +163,8 @@ export default function Home() {
           </SimpleGrid>
         </Box>
       </Container>
+
+      <PricingContent />
     </>
   );
 }
