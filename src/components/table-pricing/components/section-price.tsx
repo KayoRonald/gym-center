@@ -2,7 +2,6 @@ import {
   Box,
   Container,
   SimpleGrid,
-  useColorModeValue,
 } from "@chakra-ui/react";
 import { plans } from "../data";
 import { ActionButton } from "./action-button";
