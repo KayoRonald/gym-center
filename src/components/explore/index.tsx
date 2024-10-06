@@ -5,7 +5,7 @@ export function ExploreOrProgram() {
   return (
     <Box>
       <Container maxW="6xl" px={{ base: 6, md: 3 }} position={"relative"}>
-      <GymSwiper />
+        <GymSwiper />
       </Container>
     </Box>
   );
