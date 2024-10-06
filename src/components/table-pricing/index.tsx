@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Box, Heading, chakra, VStack } from "@chakra-ui/react";
-import { Toggle } from "./toggle";
-import PricingSection from "./section-price";
+import { Toggle } from "./components/toggle";
+import PricingSection from "./components/section-price";
 
 const PricingHeading = () => (
   <VStack spacing={2} textAlign="center" gap={"24px"}>
@@ -15,7 +15,7 @@ const PricingHeading = () => (
 );
 
 export const PricingContent = () => {
-  const [isMonthly, setIsMonthly] = useState(true);
+  const [isMonthly, setIsMonthly] = useState<boolean>(false);
 
   const handleChange = () => {
     setIsMonthly(!isMonthly);
