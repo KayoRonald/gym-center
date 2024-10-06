@@ -10,8 +10,8 @@ export const SwiperNavButtons = () => {
       display="flex"
       justifyContent={'center'}
       transform="translateY(-50%)"
-      zIndex="10" // Garante que os botões estejam acima do conteúdo
-      px={4} // Adiciona espaçamento lateral para os botões
+      zIndex="10" 
+      px={4}
     >
       <IconButton
         rounded="full"

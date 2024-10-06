@@ -1,11 +1,6 @@
 import { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import {
-  Box,
-  Flex,
-  Heading,
-  Image,
-} from "@chakra-ui/react";
+import { Box, Flex, Heading, Image } from "@chakra-ui/react";
 import { SwiperNavButtons } from "../swiper-nav-buttons";
 import { sliderSettings } from "../config";
 import { CSSProperties } from "react";
@@ -33,23 +28,18 @@ export const GymSwiper = () => {
 
   return (
     <Box>
-     <Flex
-          align="center"
-          justify="space-between"
-          mb={4}
-          position="relative"
-        >
-          <Heading fontSize={{ base: "2xl", md: "4xl" }}>
-            Explore Our Program
-          </Heading>
-          <Image
-            src="/exploreProgram.svg"
-            alt="Explore Program"
-            position="absolute"
-            left={0}
-            zIndex="-1"
-          />
-        </Flex>
+      <Flex align="center" justify="space-between" mb={4} position="relative">
+        <Heading fontSize={{ base: "2xl", md: "4xl" }}>
+          Explore Our Program
+        </Heading>
+        <Image
+          src="/exploreProgram.svg"
+          alt="Explore Program"
+          position="absolute"
+          left={0}
+          zIndex="-1"
+        />
+      </Flex>
       <Swiper
         {...sliderSettings}
         onSlideChange={handleSlideChange}

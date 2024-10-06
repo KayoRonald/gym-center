@@ -16,7 +16,9 @@ import {
 import { Helmet } from "react-helmet-async";
 import { ExploreOrProgram } from "../../components/explore";
 import Card from "../../components/banner-card";
-import { PricingContent } from "../../components/table-tricing";
+import { PricingContent } from "../../components/table-pricing";
+import TestimonialSection from "../../components/testimonial";
+import { Newsletter } from "../../components/newsletter";
 
 const PlayIcon = createIcon({
   displayName: "PlayIcon",
@@ -81,7 +83,7 @@ export default function Home() {
             w={"full"}
           >
             <Box position={"absolute"} top={0} right={0} mb={3}>
-              <AvatarGroup size="md" max={3} mb={3}>
+              <AvatarGroup size="md" max={3} mb={3} >
                 <Avatar
                   name="Ryan Florence"
                   src="https://bit.ly/ryan-florence"
@@ -91,14 +93,6 @@ export default function Home() {
                   src="https://bit.ly/sage-adebayo"
                 />
                 <Avatar name="Kent Dodds" src="https://bit.ly/kent-c-dodds" />
-                <Avatar
-                  name="Prosper Otemuyiwa"
-                  src="https://bit.ly/prosper-baba"
-                />
-                <Avatar
-                  name="Christian Nwamba"
-                  src="https://bit.ly/code-beast"
-                />
               </AvatarGroup>
               <chakra.span display={{ base: "none", sm: "inline-block" }}>
                 10K+ Satisfied Customer
@@ -165,6 +159,10 @@ export default function Home() {
       </Container>
 
       <PricingContent />
+
+      <TestimonialSection />
+
+      <Newsletter/>
     </>
   );
 }
