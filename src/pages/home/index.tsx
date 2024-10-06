@@ -43,7 +43,7 @@ export default function Home() {
               fontWeight={600}
               fontSize={{ base: "3xl", sm: "4xl", lg: "6xl" }}
             >
-             Helps for your ideal body fitness
+              Helps for your ideal body fitness
             </Heading>
             <Text color={"gray.500"} fontSize={"18px"}>
               Motivate users with benefits and positive reinforcement, and offer
@@ -83,7 +83,7 @@ export default function Home() {
             w={"full"}
           >
             <Box position={"absolute"} top={0} right={0} mb={3}>
-              <AvatarGroup size="md" max={3} mb={3} >
+              <AvatarGroup size="md" max={3} mb={3}>
                 <Avatar
                   name="Ryan Florence"
                   src="https://bit.ly/ryan-florence"
@@ -122,7 +122,7 @@ export default function Home() {
 
       <Card />
 
-      <Container maxW="5xl" px={{ base: 6, md: 3 }} padding={'40px 20px'}>
+      <Container maxW="5xl" px={{ base: 6, md: 3 }} padding={"40px 20px"}>
         <Box
           bg="gray.700"
           py={{ base: 10, md: 18 }}
@@ -162,7 +162,7 @@ export default function Home() {
 
       <TestimonialSection />
 
-      <Newsletter/>
+      <Newsletter />
     </>
   );
 }
