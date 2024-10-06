@@ -1,8 +1,4 @@
-import {
-  Box,
-  Container,
-  SimpleGrid,
-} from "@chakra-ui/react";
+import { Box, Container, SimpleGrid } from "@chakra-ui/react";
 import { plans } from "../data";
 import { ActionButton } from "./action-button";
 import { BenefitList } from "./benefit-list";
@@ -12,7 +8,6 @@ import { ContainerContentProps } from "../type";
 
 const ContainerContent = ({
   children,
-  textColor,
   isHighlighted,
   ...rest
 }: ContainerContentProps) => (
@@ -41,7 +36,7 @@ export default function PricingSection({ isMonthly }: { isMonthly: boolean }) {
     <SimpleGrid
       as={Container}
       maxW={"7xl"}
-      columns={[1, null, 4]}
+      columns={[1, null, 2, 2, 4]}
       gap={"24px"}
       p={8}
       alignItems="flex-start"

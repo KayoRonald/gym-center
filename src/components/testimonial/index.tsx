@@ -22,8 +22,9 @@ import { SwiperNavButtons } from "./next-button-swiper";
 export default function TestimonialSection() {
   const slideStyles: CSSProperties = {
     boxSizing: "border-box",
-    maxWidth: "100%",
-    height: "100%",
+    height: "300px",
+    display: "flex",
+    transition: "background-color 0.3s",
   };
 
   return (
@@ -36,6 +37,7 @@ export default function TestimonialSection() {
       as={Container}
       maxW="7xl"
       color="white"
+       minHeight="300px"
     >
       {/* Seção esquerda */}
       <Stack
@@ -87,6 +89,8 @@ export default function TestimonialSection() {
             nextEl: ".swiper-button-next",
           }}
           pagination={{ clickable: true }}
+          spaceBetween={40} // Espaço entre os slides
+          slidesPerView={1} // Quantidade de slides visíveis
         >
           {testimonials.map((item, index) => (
             <SwiperSlide key={index} style={slideStyles}>

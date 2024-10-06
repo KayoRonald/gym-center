@@ -1,4 +1,4 @@
-import { Text, Stack, VStack } from "@chakra-ui/react";
+import { Text, Stack, VStack, Container } from "@chakra-ui/react";
 
 interface ToggleProps {
   isMonthly: boolean;
@@ -7,7 +7,7 @@ interface ToggleProps {
 
 export const Toggle = ({ isMonthly, handleChange }: ToggleProps) => {
   return (
-    <VStack spacing={2} textAlign="center" gap={"24px"} mt="20px" mb='24px'>
+    <VStack as={Container} spacing={2} textAlign="center" gap={"20px"} mt="20px" mb='20px'>
       <Stack
         bg="#FFFFFF"
         w="336px"

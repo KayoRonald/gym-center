@@ -1,5 +1,10 @@
 # Gym Center - Fitness Website
 
+<p align="center">
+    <img src="./public/banner.png" alt="nãi faço a menor ideia" />
+</p>
+
+
 ## Visão Geral
 
 Este é um projeto de uma página de academia que ajuda usuários a encontrar o plano de fitness ideal para suas necessidades. A interface oferece funcionalidades como visualização de programas, planos de preços e depoimentos de clientes satisfeitos. Construída com **React**, **Vite**, **TypeScript**, e **Chakra UI** para garantir uma experiência de usuário moderna e fluida.
