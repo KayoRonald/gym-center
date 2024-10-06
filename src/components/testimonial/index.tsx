@@ -49,7 +49,6 @@ export default function TestimonialSection() {
       >
         <Box>
           <Heading
-            pl={10}
             as={"h2"}
             fontSize="3xl"
             fontWeight="bold"
@@ -66,7 +65,7 @@ export default function TestimonialSection() {
             top={"-50px"}
           />
         </Box>
-        <Flex justify={"start"} pl={10} align={"start"} direction={"column"}>
+        <Flex justify={"start"} align={"start"} direction={"column"}>
           <AvatarGroup mt={4}>
             <Avatar src="https://i.pravatar.cc/50" />
             <Avatar src="https://i.pravatar.cc/51" />
