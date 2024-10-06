@@ -44,6 +44,7 @@ export const GymSwiper = () => {
         {...sliderSettings}
         onSlideChange={handleSlideChange}
         style={{ width: "100%", height: "100%" }}
+        spaceBetween={20}
       >
         <SwiperNavButtons />
         {gymData.map((item, index) => (
