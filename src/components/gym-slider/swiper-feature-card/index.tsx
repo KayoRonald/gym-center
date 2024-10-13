@@ -1,16 +1,19 @@
 import { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Box, Flex, Heading, Image } from "@chakra-ui/react";
+import { useTranslation } from "react-i18next";
 import { SwiperNavButtons } from "../swiper-nav-buttons";
 import { sliderSettings } from "../config";
 import { CSSProperties } from "react";
 import SwiperCore from "swiper";
-import { gymData } from "../../../data/gym";
+import gymData from "../../../data/gym";
 import { FeatureCard } from "./feature-card";
+
 type SwiperInstance = SwiperCore;
 
 export const GymSwiper = () => {
   const [activeIndex, setActiveIndex] = useState<number>(0);
+  const { t } = useTranslation();
 
   const handleSlideChange = (swiper: SwiperInstance) => {
     setActiveIndex(swiper.realIndex);
@@ -30,7 +33,7 @@ export const GymSwiper = () => {
     <Box>
       <Flex align="center" justify="space-between" mb={4} position="relative">
         <Heading fontSize={{ base: "2xl", md: "4xl" }}>
-          Explore Our Program
+          {t("exploreProgram.heading")}
         </Heading>
         <Image
           src="/exploreProgram.svg"
@@ -47,7 +50,7 @@ export const GymSwiper = () => {
         spaceBetween={20}
       >
         <SwiperNavButtons />
-        {gymData.map((item, index) => (
+        {gymData(t).map((item, index) => (
           <SwiperSlide key={index} style={slideStyles}>
             <FeatureCard
               isActive={activeIndex === index}

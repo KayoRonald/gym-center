@@ -1,58 +1,58 @@
-import { Box, Button, Flex, Heading, Text, VStack } from "@chakra-ui/react";
-import { Helmet } from "react-helmet-async";
+import {
+  Box,
+  Heading,
+  Text,
+  Button,
+  VStack,
+  HStack,
+  Icon,
+} from "@chakra-ui/react";
+import { Link } from "react-router-dom";
+import { FaDumbbell } from "react-icons/fa";
+import { useTranslation } from "react-i18next";
+import BubbleBackground from "./bubble-background";
 
-export default function Error404() {
+const Error404 = () => {
+  const { t } = useTranslation();
   return (
-    <>
-      <Helmet title="Not Found" />
-      <Flex
-        flexDirection="column"
-        minHeight="100vh"
-        width="full"
-        align="center"
-        justifyContent="center"
-      >
-        <Box
-          px={7}
-          width="94%"
-          maxWidth="900px"
-          borderRadius="sm"
-          textAlign="center"
-          mt={10}
+    <Box
+      position="relative"
+      display="flex"
+      alignItems="center"
+      justifyContent="center"
+      h="100vh"
+      textAlign="center"
+      overflow="hidden"
+    >
+      <BubbleBackground />
+
+      <VStack spacing={6} zIndex={1}>
+        <HStack spacing={4}>
+          <Icon as={FaDumbbell} boxSize={8} color="teal.500" />
+          <Heading as="h1" size="4xl" color="teal.500">
+            404
+          </Heading>
+          <Icon as={FaDumbbell} boxSize={8} color="teal.500" />
+        </HStack>
+        <Heading as="h2" size="lg">
+          {t("error404.title")}
+        </Heading>
+        <Text fontSize="lg" maxW="md">
+          {t("error404.message")}
+        </Text>
+        <Button
+          as={Link}
+          to="/"
+          colorScheme="teal"
+          size="lg"
+          _hover={{ bg: "teal.600" }}
+          px={10}
         >
-          <Box p={4}>
-            <VStack
-              justify="center"
-              spacing="4"
-              textAlign="center"
-              as="article"
-              mt={5}
-            >
-              <Heading fontSize="5xl" fontWeight={700} color="#3B72FF">
-                ERROR 404
-              </Heading>
-              <Text>Page not found! </Text>
-              <Button
-                bg={{
-                  base: "#3B72FF",
-                  md: "#3B72FF",
-                }}
-                _hover={{
-                  bg: "#3B72FF",
-                }}
-                color="white"
-                onClick={() => {
-                  window.history.back();
-                }}
-                w={"100%"}
-                maxW={"14rem"}
-              >
-                Voltar
-              </Button>
-            </VStack>
-          </Box>
-        </Box>
-      </Flex>
-    </>
+          {t("error404.buttonText")}
+        </Button>
+      </VStack>
+    </Box>
   );
-}
+};
+
+export default Error404;

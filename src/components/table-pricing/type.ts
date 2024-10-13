@@ -2,10 +2,10 @@ import { BoxProps } from "@chakra-ui/layout";
 
 export interface Plan {
   name: string;
-  isHighlighted: boolean;
   monthlyPrice: string;
   yearlyPrice: string;
   benefits: string[];
+  isHighlighted: boolean;
 }
 
 export interface ContainerContentProps extends BoxProps {

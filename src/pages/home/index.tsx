@@ -19,6 +19,7 @@ import Card from "../../components/banner-card";
 import { PricingContent } from "../../components/table-pricing";
 import TestimonialSection from "../../components/testimonial";
 import { Newsletter } from "../../components/newsletter";
+import { useTranslation } from "react-i18next";
 
 const PlayIcon = createIcon({
   displayName: "PlayIcon",
@@ -27,6 +28,7 @@ const PlayIcon = createIcon({
 });
 
 export default function Home() {
+  const { t } = useTranslation();
   return (
     <>
       <Helmet title="Home" />
@@ -43,11 +45,10 @@ export default function Home() {
               fontWeight={600}
               fontSize={{ base: "3xl", sm: "4xl", lg: "6xl" }}
             >
-              Helps for your ideal body fitness
+              {t("heroSection.heading")}
             </Heading>
             <Text color={"gray.500"} fontSize={"18px"}>
-              Motivate users with benefits and positive reinforcement, and offer
-              modifications and progress tracking.
+              {t("heroSection.description")}
             </Text>
             <Stack
               spacing={{ base: 4, sm: 6 }}
@@ -61,7 +62,7 @@ export default function Home() {
                 bg={"primary.500"}
                 _hover={{ bg: "primary.500" }}
               >
-                Start Training
+                {t("heroSection.startTrainingButton")}
               </Button>
               <Button
                 rounded={"full"}
@@ -71,7 +72,7 @@ export default function Home() {
                 leftIcon={<PlayIcon h={4} w={4} color={"gray.300"} />}
                 bg={"transparent"}
               >
-                Watch Demo
+                {t("heroSection.watchDemoButton")}
               </Button>
             </Stack>
           </Stack>
@@ -95,7 +96,7 @@ export default function Home() {
                 <Avatar name="Kent Dodds" src="https://bit.ly/kent-c-dodds" />
               </AvatarGroup>
               <chakra.span display={{ base: "none", sm: "inline-block" }}>
-                10K+ Satisfied Customer
+                {t("heroSection.satisfiedCustomers")}{" "}
               </chakra.span>
             </Box>
             <Box
@@ -132,8 +133,7 @@ export default function Home() {
           <SimpleGrid columns={{ base: 1, md: 3 }} spacing={8}>
             <Box gridColumn={{ base: "span 1", md: "span 2" }}>
               <Text fontWeight={600} fontSize={"2xl"}>
-                Enhance user experience with healthy nutrition tips, support
-                resources, and social elements.
+                {t("nutritionExperience.heading")}
               </Text>
             </Box>
             <Flex
@@ -151,7 +151,7 @@ export default function Home() {
                   bg: "blue.700",
                 }}
               >
-                Join Us
+                {t("nutritionExperience.joinNowButton")}
               </Button>
             </Flex>
           </SimpleGrid>

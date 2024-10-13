@@ -6,6 +6,7 @@ import {
   Text,
 } from "@chakra-ui/react";
 import { ReactElement } from "react";
+import { useTranslation } from "react-i18next";
 import { FaCheck } from "react-icons/fa";
 
 interface FeatureProps {
@@ -35,22 +36,23 @@ const Feature = ({ text, icon, iconBg }: FeatureProps) => {
 };
 
 export function SplitWithIcon() {
+  const { t } = useTranslation();
   return (
     <Box>
       <Feature
         icon={<Icon as={FaCheck} color={"black"} w={2} h={2} />}
         iconBg={"primary.500"}
-        text={"Increase Muscle and Strength"}
+        text={t("ctaWithImage.list.muscleStrength")}
       />
       <Feature
         icon={<Icon as={FaCheck} color={"black"} w={2} h={2} />}
         iconBg={"primary.500"}
-        text={"Be Healthier than before"}
+        text={t("ctaWithImage.list.overallHealth")}
       />
       <Feature
         icon={<Icon as={FaCheck} color={"black"} w={2} h={2} />}
         iconBg={"primary.500"}
-        text={"Increase Stamina"}
+        text={t("ctaWithImage.list.stamina")}
       />
     </Box>
   );

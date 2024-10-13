@@ -3,6 +3,7 @@ import { FaBicycle, FaSwimmer, FaRunning, FaDumbbell, FaMusic } from 'react-icon
 import { GiPunch, GiMeditation, GiBoxingGlove } from 'react-icons/gi';
 import { GrYoga } from 'react-icons/gr';
 import { IoMdFitness } from 'react-icons/io';
+import { WithTranslation } from 'react-i18next';
 
 export interface Igym {
   name: string;
@@ -10,55 +11,57 @@ export interface Igym {
   icon: IconType;
 }
 
-export const gymData: Igym[] = [
+const gymData = (t: WithTranslation["t"]): Igym[] => [
   {
-    name: 'General Gym',
-    description: 'A place where people go to exercise with various equipment for strength training and cardiovascular fitness.',
-    icon: IoMdFitness
+    name: t('gym.generalGym.name'),
+    description: t('gym.generalGym.description'),
+    icon: IoMdFitness,
   },
   {
-    name: 'Yoga',
-    description: 'A practice that combines physical postures, breathing exercises, and meditation to enhance flexibility and mental clarity.',
-    icon: GrYoga
+    name: t('gym.yoga.name'),
+    description: t('gym.yoga.description'),
+    icon: GrYoga,
   },
   {
-    name: 'Boxing',
-    description: 'A combat sport where participants throw punches at each other, often involving rigorous training and conditioning.',
-    icon: GiBoxingGlove
+    name: t('gym.boxing.name'),
+    description: t('gym.boxing.description'),
+    icon: GiBoxingGlove,
   },
   {
-    name: 'Cycling',
-    description: 'Exercise involving riding a bicycle, either on a stationary bike or outdoors, focusing on cardiovascular endurance.',
-    icon: FaBicycle
+    name: t('gym.cycling.name'),
+    description: t('gym.cycling.description'),
+    icon: FaBicycle,
   },
   {
-    name: 'Swimming',
-    description: 'A full-body workout that involves moving through water using the arms and legs, enhancing both strength and cardiovascular health.',
-    icon: FaSwimmer
+    name: t('gym.swimming.name'),
+    description: t('gym.swimming.description'),
+    icon: FaSwimmer,
   },
   {
-    name: 'Running',
-    description: 'A cardiovascular exercise that involves moving at a fast pace on foot, promoting overall fitness and endurance.',
-    icon: FaRunning
+    name: t('gym.running.name'),
+    description: t('gym.running.description'),
+    icon: FaRunning,
   },
   {
-    name: 'Dance',
-    description: 'A rhythmic activity that combines movement and music, offering a fun and engaging way to improve fitness and coordination.',
-    icon: FaMusic
+    name: t('gym.dance.name'),
+    description: t('gym.dance.description'),
+    icon: FaMusic,
   },
   {
-    name: 'Martial Arts',
-    description: 'Various systems of combat training focusing on self-defense, discipline, and physical fitness through techniques and forms.',
-    icon: GiPunch
+    name: t('gym.martialArts.name'),
+    description: t('gym.martialArts.description'),
+    icon: GiPunch,
   },
   {
-    name: 'Pilates',
-    description: 'A form of exercise that emphasizes balance, posture, strength, and flexibility through controlled movements and breathing.',
-    icon: GiMeditation
+    name: t('gym.pilates.name'),
+    description: t('gym.pilates.description'),
+    icon: GiMeditation,
   },
   {
-    name: 'Weightlifting',
-    description: 'Strength training involving lifting heavy weights to build muscle mass and overall strength.',
-    icon: FaDumbbell
-  }
+    name: t('gym.weightlifting.name'),
+    description: t('gym.weightlifting.description'),
+    icon: FaDumbbell,
+  },
 ];
+
+export default gymData;

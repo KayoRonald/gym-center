@@ -1,10 +1,11 @@
 import { Box, Container, SimpleGrid } from "@chakra-ui/react";
-import { plans } from "../data";
+import { usePlans } from "../data";
 import { ActionButton } from "./action-button";
 import { BenefitList } from "./benefit-list";
 import { BestOfferBadge } from "./best-offer-badge";
 import { PriceHeading } from "./price-heading";
 import { ContainerContentProps } from "../type";
+import { useTranslation } from "react-i18next";
 
 const ContainerContent = ({
   children,
@@ -18,7 +19,7 @@ const ContainerContent = ({
     borderRadius="md"
     textAlign="center"
     position="relative"
-    height={isHighlighted ? "564px" : "537px"}
+    height={isHighlighted ? "560px" : "auto"}
     w={"100%"}
     mt={isHighlighted ? "-16px" : "0"}
     display="flex"
@@ -30,8 +31,11 @@ const ContainerContent = ({
 );
 
 export default function PricingSection({ isMonthly }: { isMonthly: boolean }) {
+  const { t } = useTranslation();
   const buttonBg = "blue.500";
-
+  
+  const plans = usePlans();
+  
   return (
     <SimpleGrid
       as={Container}
@@ -47,11 +51,12 @@ export default function PricingSection({ isMonthly }: { isMonthly: boolean }) {
           isHighlighted={plan.isHighlighted}
           color="white"
         >
-          {plan.isHighlighted && <BestOfferBadge />}
+          {plan.isHighlighted && <BestOfferBadge name={t("plans.BestOffer")} />}
           <PriceHeading
             type={plan.name}
             price={!isMonthly ? plan.monthlyPrice : plan.yearlyPrice}
             isHighlighted={plan.isHighlighted}
+            isMonthly={isMonthly}
           />
           <BenefitList benefits={plan.benefits} />
           <ActionButton

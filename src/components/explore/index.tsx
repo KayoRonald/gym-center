@@ -1,5 +1,5 @@
 import { Box, Container } from "@chakra-ui/react";
-import { GymSwiper } from "../swiper-slider";
+import { GymSwiper } from "../gym-slider";
 
 export function ExploreOrProgram() {
   return (

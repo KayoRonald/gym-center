@@ -1,6 +1,10 @@
-import { Box } from "@chakra-ui/react";
+import { Box, Text } from "@chakra-ui/react";
 
-export const BestOfferBadge = () => (
+
+type BestOfferBadgeProps = {
+  name: string;
+}
+export const BestOfferBadge: React.FC<BestOfferBadgeProps> = ({ name }) => (
   <Box
     position="absolute"
     top="18px"
@@ -13,6 +17,6 @@ export const BestOfferBadge = () => (
     w={"207.46px"}
     fontWeight={400}
   >
-    Best Offer
+    <Text>{name}</Text>
   </Box>
 );

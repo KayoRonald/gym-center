@@ -1,4 +1,4 @@
-import { Flex, Icon, List, ListItem, Stack } from "@chakra-ui/react";
+import { Flex, Icon, List, ListItem, Stack, Text } from "@chakra-ui/react";
 import { FaCheck } from "react-icons/fa";
 import { Plan } from "../type";
 
@@ -16,7 +16,7 @@ export const BenefitList = ({ benefits }: Pick<Plan, 'benefits'>) => (
         >
           <Icon as={FaCheck} color={"black"} w={2} h={2} />
         </Flex>
-        {benefit}
+        <Text fontSize={'md'}>{benefit}</Text>
       </ListItem>
     ))}
   </List>

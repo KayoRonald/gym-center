@@ -9,9 +9,11 @@ import {
   Heading,
   Center,
 } from "@chakra-ui/react";
+import { useTranslation } from "react-i18next";
 import { SplitWithIcon } from "./list-card";
 
 export default function Card() {
+  const { t } = useTranslation();
   return (
     <Box as={Container} maxW={"6xl"} my={12}>
       <SimpleGrid
@@ -83,7 +85,7 @@ export default function Card() {
               lineHeight="shorter"
               textShadow="2px 0 currentcolor"
             >
-              Transform your physique with our fitness plan.
+             {t("ctaWithImage.heading")}
             </Heading>
           </Box>
           <SplitWithIcon />
@@ -94,14 +96,14 @@ export default function Card() {
               _hover={{ bg: "primary.500" }}
               color="gray.100"
             >
-              Join Now
+              {t("ctaWithImage.joinNowButton")}
             </Button>
             <Button
               w={{ base: "full", sm: "auto" }}
               bg="transparent"
               color="gray.100"
             >
-              Contact Us
+              {t("ctaWithImage.ContactUsButton")}
             </Button>
           </ButtonGroup>
         </Flex>

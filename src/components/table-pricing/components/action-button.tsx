@@ -1,4 +1,5 @@
 import { Box, Button, ButtonProps } from "@chakra-ui/react";
+import { useTranslation } from "react-i18next";
 
 type ActionButtonProps = ButtonProps & {
   isHighlighted: boolean;
@@ -19,7 +20,7 @@ export const ActionButton = ({ isHighlighted, buttonBg, ...props }: ActionButton
       rounded={"md"}
       {...props}
     >
-      Register Now
+      {useTranslation().t("plans.registerNow")}
     </Button>
   </Box>
 );

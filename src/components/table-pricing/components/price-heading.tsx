@@ -1,16 +1,20 @@
 import { Box, VStack, Text } from "@chakra-ui/react";
+import { useTranslation } from "react-i18next";
 
 type PriceHeadingProps = {
   type: string;
   price: string;
   isHighlighted?: boolean;
+  isMonthly: boolean;
 };
 
 export const PriceHeading: React.FC<PriceHeadingProps> = ({
   type,
   price,
   isHighlighted,
+  isMonthly
 }) => {
+  const { t } = useTranslation();
   return (
     <Box textAlign={"start"}>
       <Text
@@ -25,7 +29,7 @@ export const PriceHeading: React.FC<PriceHeadingProps> = ({
           {price}
         </Text>
         <Text fontSize="sm" mb={4} lineHeight={'24px'}>
-          per month, billed annually
+            {!isMonthly ? t("plans.packages.perMonth") : t("plans.packages.billedAnnually")}
         </Text>
       </VStack>
     </Box>

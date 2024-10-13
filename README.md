@@ -20,7 +20,7 @@ Este é um projeto de uma página de academia que ajuda usuários a encontrar o 
 
 Antes de iniciar, certifique-se de ter as seguintes ferramentas instaladas em seu sistema:
 
-- **Node.js** (versão 14.x ou superior)
+- **Node.js** (versão 18.x ou superior)
 - **npm** ou **yarn**
 - **Git**
 

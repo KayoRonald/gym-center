@@ -1,5 +1,5 @@
 import { Avatar, Box, Flex, Stack, Text } from "@chakra-ui/react";
-import { TestimonialProps } from "./data";
+import { TestimonialProps } from "../../data/testimonials";
 import { renderStars } from "./render-stars";
 
 export const TestimonialCard = ({

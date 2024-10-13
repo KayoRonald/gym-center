@@ -11,15 +11,20 @@ import {
 } from "@chakra-ui/react";
 import { TestimonialCard } from "./testimonial-card";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { sliderSettings } from "../swiper-slider/config";
-import { testimonials } from "./data";
-import "swiper/css/navigation"; 
+import { sliderSettings } from "../gym-slider/config";
+import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { CSSProperties } from "react";
 import { Navigation, Pagination } from "swiper/modules";
 import { SwiperNavButtons } from "./next-button-swiper";
+import { useTranslation } from "react-i18next";
+import testimonials from "../../data/testimonials";
 
 export default function TestimonialSection() {
+  const { t } = useTranslation();
+
+  const testimonialData = testimonials(t);
+
   const slideStyles: CSSProperties = {
     boxSizing: "border-box",
     height: "300px",
@@ -37,7 +42,7 @@ export default function TestimonialSection() {
       as={Container}
       maxW="7xl"
       color="white"
-       minHeight="300px"
+      minHeight="300px"
     >
       {/* Seção esquerda */}
       <Stack
@@ -55,7 +60,7 @@ export default function TestimonialSection() {
             maxW={"396px"}
             textAlign={"start"}
           >
-            What Our Member Say About Us?
+            {t("testimonial.heading")}
           </Heading>
           <Image
             src="/testimonial.svg"
@@ -73,7 +78,7 @@ export default function TestimonialSection() {
             <Avatar src="https://i.pravatar.cc/52" />
           </AvatarGroup>
           <Text mt={2} fontSize="lg" color="gray.400">
-            100+ Satisfied Customers
+            {t("testimonial.satisfiedCustomers")}
           </Text>
         </Flex>
       </Stack>
@@ -91,7 +96,7 @@ export default function TestimonialSection() {
           spaceBetween={40} // Espaço entre os slides
           slidesPerView={1} // Quantidade de slides visíveis
         >
-          {testimonials.map((item, index) => (
+          {testimonialData.map((item, index) => (
             <SwiperSlide key={index} style={slideStyles}>
               <TestimonialCard
                 key={index}
