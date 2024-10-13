@@ -29,7 +29,7 @@ Antes de iniciar, certifique-se de ter as seguintes ferramentas instaladas em se
 - **React**: Biblioteca JavaScript para construção de interfaces de usuário.
 - **Vite**: Ferramenta de desenvolvimento rápida para projetos frontend.
 - **TypeScript**: Superconjunto de JavaScript que adiciona tipagem estática ao código.
-- **Chakra UI**: Biblioteca de componentes UI simples e modular, com base em design system.
+- **Chakra UI v2**: Biblioteca de componentes UI simples e modular, com base em design system.
 - **Swiper.js**: Biblioteca de carrossel de slides.
 
 ## Instalação
