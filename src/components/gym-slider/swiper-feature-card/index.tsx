@@ -1,12 +1,11 @@
-import { useState } from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
 import { Box, Flex, Heading, Image } from "@chakra-ui/react";
+import { CSSProperties, useState } from "react";
 import { useTranslation } from "react-i18next";
-import { SwiperNavButtons } from "../swiper-nav-buttons";
-import { sliderSettings } from "../config";
-import { CSSProperties } from "react";
 import SwiperCore from "swiper";
+import { Swiper, SwiperSlide } from "swiper/react";
 import gymData from "../../../data/gym";
+import { sliderSettings } from "../config";
+import { SwiperNavButtons } from "../swiper-nav-buttons";
 import { FeatureCard } from "./feature-card";
 
 type SwiperInstance = SwiperCore;

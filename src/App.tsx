@@ -1,14 +1,14 @@
 import { ChakraProvider } from "@chakra-ui/react";
+import "@fontsource/poppins";
+import "@fontsource/urbanist/700.css";
 import { Helmet, HelmetProvider } from "react-helmet-async";
+import { I18nextProvider } from "react-i18next";
 import { RouterProvider } from "react-router-dom";
 import "swiper/css";
-import "@fontsource/urbanist/700.css";
-import "@fontsource/poppins";
-import { router } from "./router/router";
-import { I18nextProvider } from "react-i18next";
-import i18next from "./i18n/";
-import { theme } from "./theme";
 import { ColorModeProvider } from "./components/ui/color-mode";
+import i18next from "./i18n/";
+import { router } from "./router/router";
+import { theme } from "./theme";
 
 function App() {
   return (

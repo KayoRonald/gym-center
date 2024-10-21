@@ -12,12 +12,12 @@ import {
 } from "@chakra-ui/react";
 
 import { Helmet } from "react-helmet-async";
-import { ExploreOrProgram } from "../../components/explore";
+import { useTranslation } from "react-i18next";
 import Card from "../../components/banner-card";
+import { ExploreOrProgram } from "../../components/explore";
+import { Newsletter } from "../../components/newsletter";
 import { PricingContent } from "../../components/table-pricing";
 import TestimonialSection from "../../components/testimonial";
-import { Newsletter } from "../../components/newsletter";
-import { useTranslation } from "react-i18next";
 import { Avatar, AvatarGroup } from "../../components/ui/avatar";
 import { Button } from "../../components/ui/button";
 
@@ -94,7 +94,7 @@ export default function Home() {
                     src="https://bit.ly/sage-adebayo"
                   />
                   <Avatar name="Kent Dodds" src="https://bit.ly/kent-c-dodds" />
-                  <Avatar fallback="+10k"/>
+                  <Avatar fallback="+10k" />
                 </AvatarGroup>
               </Stack>
               <Span display={{ base: "none", sm: "inline-block" }}>
