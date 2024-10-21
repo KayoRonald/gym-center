@@ -1,16 +1,24 @@
-import { extendTheme } from '@chakra-ui/react'
-import { config } from './foundations/config'
-import { radii } from './foundations/radii'
-import { styles } from './foundations/styles'
-import { colors } from './foundations/colors'
-import { fonts } from './foundations/fonts'
+import {
+  createSystem,
+  defineConfig,
+  defaultConfig,
+  mergeConfigs,
+} from "@chakra-ui/react";
+import { colors, fonts, globalCss } from "./tokens/";
 
-const customTheme = extendTheme({
-  radii,
-  config,
-  colors,
-  fonts,
-  styles,
-})
+const config = defineConfig(
+  mergeConfigs(defaultConfig, {
+    preflight: true,
+    cssVarsPrefix: "ck",
+    globalCss,
+    theme: {
+      tokens: {
+        colors,
+        fonts,
+      },
+      semanticTokens: {},
+    },
+  })
+);
 
-export default customTheme
+export const theme = createSystem(config);

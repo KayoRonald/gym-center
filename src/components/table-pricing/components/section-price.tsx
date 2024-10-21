@@ -13,15 +13,15 @@ const ContainerContent = ({
   ...rest
 }: ContainerContentProps) => (
   <Box
+    color="white"
     bg={isHighlighted ? "primary.600" : "gray.700"}
     p={6}
     overflow={"hidden"}
     borderRadius="md"
     textAlign="center"
     position="relative"
-    height={isHighlighted ? "560px" : "auto"}
+    height={'auto'}
     w={"100%"}
-    mt={isHighlighted ? "-16px" : "0"}
     display="flex"
     flexDirection="column"
     {...rest}
@@ -33,9 +33,9 @@ const ContainerContent = ({
 export default function PricingSection({ isMonthly }: { isMonthly: boolean }) {
   const { t } = useTranslation();
   const buttonBg = "blue.500";
-  
+
   const plans = usePlans();
-  
+
   return (
     <SimpleGrid
       as={Container}
@@ -46,11 +46,7 @@ export default function PricingSection({ isMonthly }: { isMonthly: boolean }) {
       alignItems="flex-start"
     >
       {plans.map((plan, index) => (
-        <ContainerContent
-          key={index}
-          isHighlighted={plan.isHighlighted}
-          color="white"
-        >
+        <ContainerContent key={index} isHighlighted={plan.isHighlighted}>
           {plan.isHighlighted && <BestOfferBadge name={t("plans.BestOffer")} />}
           <PriceHeading
             type={plan.name}

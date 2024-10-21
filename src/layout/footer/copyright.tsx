@@ -1,11 +1,17 @@
 import { useEffect } from "react";
-import { Link, Stack, Text, Menu, MenuButton, MenuList, MenuItem, IconButton } from "@chakra-ui/react";
+import { Link, Stack, Text, IconButton } from "@chakra-ui/react";
 import { useTranslation } from "react-i18next";
 import { FaGlobeAmericas } from "react-icons/fa";
+import {
+  MenuContent,
+  MenuItem,
+  MenuRoot,
+  MenuTrigger,
+} from "../../components/ui/menu";
 
 export const Copyright = () => {
   const { i18n, t } = useTranslation();
- 
+
   const changeLanguage = (lang: string): void => {
     i18n.changeLanguage(lang);
     localStorage.setItem("selectedLanguage", lang);
@@ -19,32 +25,43 @@ export const Copyright = () => {
   return (
     <Stack
       direction={{ base: "column", md: "row" }}
-      spacing={3}
+      gap={3}
       justify="space-between"
       align={{ base: "center", md: "center" }}
       pb="24px"
     >
       <Text>© {new Date().getFullYear()} Fitness Center</Text>
-      <Stack spacing={7} direction={{ base: "column", md: "row" }} align={'center'}>
+      <Stack gap={7} direction={{ base: "column", md: "row" }} align={"center"}>
         <Link href="#">{t("footer.termOfUse")}</Link>
-        <Link href="#">{t('footer.privacyPolicy')}</Link>
+        <Link href="#">{t("footer.privacyPolicy")}</Link>
 
-        <Menu>
-          <MenuButton
-            as={IconButton}
-            aria-label='Language Options'
-            icon={<FaGlobeAmericas />}
-            variant='outline'
-          />
-          <MenuList>
-            <MenuItem onClick={() => changeLanguage("en")}>
+        <MenuRoot>
+          <MenuTrigger asChild>
+            <IconButton
+              as={IconButton}
+              aria-label="Language Options"
+              variant="solid"
+            >
+              <FaGlobeAmericas />
+            </IconButton>
+          </MenuTrigger>
+          <MenuContent bg={"gray.600/40"}>
+            <MenuItem
+              cursor={'pointer'}
+              value="langue-english"
+              onClick={() => changeLanguage("en")}
+            >
               English
             </MenuItem>
-            <MenuItem onClick={() => changeLanguage("br")}>
+            <MenuItem
+              cursor={'pointer'}
+              value="langue-portugues"
+              onClick={() => changeLanguage("br")}
+            >
               Português
             </MenuItem>
-          </MenuList>
-        </Menu>
+          </MenuContent>
+        </MenuRoot>
       </Stack>
     </Stack>
   );

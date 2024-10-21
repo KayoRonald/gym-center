@@ -1,6 +1,7 @@
-import { Avatar, Box, Flex, Stack, Text } from "@chakra-ui/react";
+import { Box, Flex, Stack, Text } from "@chakra-ui/react";
 import { TestimonialProps } from "../../data/testimonials";
-import { renderStars } from "./render-stars";
+import { Rating } from "../ui/rating";
+import { Avatar } from "../ui/avatar";
 
 export const TestimonialCard = ({
   author,
@@ -10,8 +11,7 @@ export const TestimonialCard = ({
   avatar,
 }: TestimonialProps) => {
   return (
-    <Box
-      as={Stack}
+    <Stack
       bg="gray.700"
       p={6}
       borderRadius="md"
@@ -25,9 +25,9 @@ export const TestimonialCard = ({
       justify={"space-between"}
     >
       <Stack direction="row" justify={"flex-end"} my={3}>
-        {renderStars(rating)}
+      <Rating defaultValue={rating} size="md" colorPalette={'yellow'} allowHalf count={5} disabled />
       </Stack>
-      <Text fontSize="lg" mb={6} noOfLines={3} maxW={"540px"}>
+      <Text fontSize="lg" mb={6} maxW={"540px"} maxLines={3}>
         {message}
       </Text>
       <Flex align="center">
@@ -39,6 +39,6 @@ export const TestimonialCard = ({
           </Text>
         </Box>
       </Flex>
-    </Box>
+    </Stack>
   );
 };

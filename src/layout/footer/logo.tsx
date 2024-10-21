@@ -5,8 +5,8 @@ export const Logo = () => {
   const { t } = useTranslation();
 
   return (
-    <Stack spacing={4} align="flex-start" maxW="300px">
-      <Link href="https://github.com/kayoronald" isExternal>
+    <Stack gap={4} align="flex-start" maxW="300px">
+      <Link href="https://github.com/kayoronald">
         <Image
           w="180px"
           h="46px"

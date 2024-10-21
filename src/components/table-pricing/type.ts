@@ -1,4 +1,4 @@
-import { BoxProps } from "@chakra-ui/layout";
+import { BoxProps } from "@chakra-ui/react";
 
 export interface Plan {
   name: string;

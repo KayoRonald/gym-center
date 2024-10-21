@@ -4,10 +4,9 @@ import {
   Flex,
   Image,
   Button,
-  ButtonGroup,
+  Group,
   Container,
   Heading,
-  Center,
 } from "@chakra-ui/react";
 import { useTranslation } from "react-i18next";
 import { SplitWithIcon } from "./list-card";
@@ -18,18 +17,17 @@ export default function Card() {
     <Box as={Container} maxW={"6xl"} my={12}>
       <SimpleGrid
         columns={{ base: 1, md: 2 }}
-        spacing="24px"
-        as="article"
         gap="24px"
+        as="article"
       >
-        <Flex
-          position="relative"
-          height={{ base: "400px", md: "519px" }}
-          pl={3}
-          align={"center"}
-          justify={"center"}
+        <Box
+         display={{ base: "none", md: "flex" }}
+         position="relative"
+         height={{ base: "400px", md: "519px" }}
+         pl={3}
+         alignItems="center"
+         justifyContent="center"
         >
-          <Center>
             <Image
               src={"/gym/woman-dumbbell-row.png"}
               alt="Woman dumbbell row"
@@ -66,8 +64,7 @@ export default function Card() {
               loading="lazy"
               opacity={0.9}
             />
-          </Center>
-        </Flex>
+        </Box>
 
         <Flex
           direction="column"
@@ -89,7 +86,7 @@ export default function Card() {
             </Heading>
           </Box>
           <SplitWithIcon />
-          <ButtonGroup>
+          <Group>
             <Button
               w={{ base: "full", sm: "auto" }}
               bg="primary.500"
@@ -105,7 +102,7 @@ export default function Card() {
             >
               {t("ctaWithImage.ContactUsButton")}
             </Button>
-          </ButtonGroup>
+          </Group>
         </Flex>
       </SimpleGrid>
     </Box>

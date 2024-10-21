@@ -33,7 +33,7 @@ export const GymSwiper = () => {
     <Box>
       <Flex align="center" justify="space-between" mb={4} position="relative">
         <Heading fontSize={{ base: "2xl", md: "4xl" }}>
-          {t("exploreProgram.heading")}
+          {t("gym.heading")}
         </Heading>
         <Image
           src="/exploreProgram.svg"
