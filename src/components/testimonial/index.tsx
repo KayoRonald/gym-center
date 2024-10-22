@@ -5,9 +5,7 @@ import {
   Image,
   Box,
   Container,
-  Avatar,
   Text,
-  AvatarGroup,
 } from "@chakra-ui/react";
 import { TestimonialCard } from "./testimonial-card";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -19,6 +17,7 @@ import { Navigation, Pagination } from "swiper/modules";
 import { SwiperNavButtons } from "./next-button-swiper";
 import { useTranslation } from "react-i18next";
 import testimonials from "../../data/testimonials";
+import { AvatarGroup, Avatar } from "../ui/avatar";
 
 export default function TestimonialSection() {
   const { t } = useTranslation();
@@ -38,7 +37,6 @@ export default function TestimonialSection() {
       align="center"
       justify="space-between"
       p={8}
-      // gap={"50px"}
       as={Container}
       maxW="7xl"
       color="white"
@@ -65,14 +63,14 @@ export default function TestimonialSection() {
           <Image
             src="/testimonial.svg"
             alt="Testimonial"
-            position="absolute"
-            zIndex="-1"
+            zIndex="-999"
             top={"-50px"}
+            position="absolute"
           />
         </Box>
         <Flex justify={"start"} align={"start"} direction={"column"}>
           <AvatarGroup mt={4}>
-            <Avatar src="https://i.pravatar.cc/50" />
+            <Avatar name="Ryan Florence" src="https://i.pravatar.cc/50" />
             <Avatar src="https://i.pravatar.cc/51" />
             <Avatar src="https://i.pravatar.cc/52" />
             <Avatar src="https://i.pravatar.cc/52" />

@@ -1,15 +1,15 @@
 import {
   Box,
+  Button,
   Container,
   Heading,
-  Text,
   Input,
-  InputGroup,
-  InputRightElement,
-  Button,
+  Text,
   VStack,
 } from "@chakra-ui/react";
 import { useTranslation } from "react-i18next";
+import { InputGroup } from "../ui/input-group";
+import { Field } from "../ui/field";
 
 export const Newsletter = () => {
   const { t } = useTranslation();
@@ -21,11 +21,10 @@ export const Newsletter = () => {
         rounded={"md"}
         my={"40px"}
         p={"40px"}
-        
       >
-        <VStack spacing={4} textAlign={"center"} align={"center"}>
+        <VStack gap={4} textAlign={"center"} align={"center"}>
           <Heading color="white" fontSize={{ base: "xl", md: "4xl" }}>
-           {t("newsletter.subscribe")}
+            {t("newsletter.subscribe")}
           </Heading>
           <Text
             color="whiteAlpha.800"
@@ -34,31 +33,37 @@ export const Newsletter = () => {
           >
             {t("newsletter.benefits")}
           </Text>
-          <InputGroup size="lg" w={{ base: "100%", md: "600px" }}>
-            <Input
-              bg="white"
-              rounded="md"
-              _placeholder={{ color: "gray.500" }}
-              _focus={{
-                borderColor: "purple.700",
-                boxShadow: "none",
-              }}
-              color={"gray.800"}
-            />
-            <InputRightElement width={{ base: "80px", md: "180px" }} mr={1}>
-              <Button
-                w="100%"
-                h="40px"
-                size="sm"
-                bg="black"
-                color="white"
+
+          <Field cursor={'pointer'} required helperText="We'll never share your email." display={'flex'} alignItems={'center'}>
+            <InputGroup
+              w={{ base: "100%", md: "600px" }}
+              endElement={
+                <Button
+                  width={{ base: "80px", md: "180px" }}
+                  size="md"
+                  mr={-2}
+                  bg="black"
+                  color="white"
+                  rounded="md"
+                  _hover={{ bg: "gray.700" }}
+                >
+                  {t("newsletter.button")}
+                </Button>
+              }
+            >
+              <Input
+                size="lg"
+                bg="white"
                 rounded="md"
-                _hover={{ bg: "gray.700" }}
-              >
-                {t("newsletter.button")}
-              </Button>
-            </InputRightElement>
-          </InputGroup>
+                _placeholder={{ color: "gray.500" }}
+                _focus={{
+                  borderColor: "purple.700",
+                  boxShadow: "none",
+                }}
+                color={"gray.800"}
+              />
+            </InputGroup>
+          </Field>
         </VStack>
       </Container>
     </Box>

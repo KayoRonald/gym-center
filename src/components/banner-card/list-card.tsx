@@ -1,10 +1,4 @@
-import {
-  Box,
-  Flex,
-  Icon,
-  Stack,
-  Text,
-} from "@chakra-ui/react";
+import { Box, Flex, Icon, Stack, Text } from "@chakra-ui/react";
 import { ReactElement } from "react";
 import { useTranslation } from "react-i18next";
 import { FaCheck } from "react-icons/fa";

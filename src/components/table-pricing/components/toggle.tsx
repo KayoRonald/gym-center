@@ -37,7 +37,6 @@ export const Toggle = ({ isMonthly, handleChange }: ToggleProps) => {
   return (
     <VStack
       as={Container}
-      spacing={2}
       textAlign="center"
       gap="20px"
       mt="20px"

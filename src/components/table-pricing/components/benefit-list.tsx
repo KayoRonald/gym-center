@@ -1,11 +1,11 @@
-import { Flex, Icon, List, ListItem, Stack, Text } from "@chakra-ui/react";
+import { Flex, Icon, Stack, Text } from "@chakra-ui/react";
 import { FaCheck } from "react-icons/fa";
 import { Plan } from "../type";
 
 export const BenefitList = ({ benefits }: Pick<Plan, 'benefits'>) => (
-  <List as={Stack}  spacing={3} mb={6} alignItems={"flex-start"}>
+  <Stack  gap={3} mb={6} alignItems={"flex-start"}>
     {benefits.map((benefit, i) => (
-      <ListItem as={Flex} key={i} align={'center'} gap={'10px'}>
+      <Flex key={i} align={'center'} gap={'10px'}>
         <Flex
           w={5}
           h={5}
@@ -17,7 +17,7 @@ export const BenefitList = ({ benefits }: Pick<Plan, 'benefits'>) => (
           <Icon as={FaCheck} color={"black"} w={2} h={2} />
         </Flex>
         <Text fontSize={'md'}>{benefit}</Text>
-      </ListItem>
+      </Flex>
     ))}
-  </List>
+  </Stack>
 );

@@ -1,4 +1,4 @@
-import { Box } from "@chakra-ui/react";
+import { chakra } from "@chakra-ui/react";
 import { CSSProperties } from "react";
 
 const BubbleBackground = () => {
@@ -31,7 +31,7 @@ const BubbleBackground = () => {
   return (
     <>
       {bubbles.map(({ key, position, size, color }) => (
-        <Box
+        <chakra.svg
           key={key}
           position="absolute"
           {...position}
@@ -40,11 +40,9 @@ const BubbleBackground = () => {
           viewBox="0 0 100 100"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
-          zIndex={-1}
-          as="svg"
         >
           <circle cx="50" cy="50" r="50" fill={color} />
-        </Box>
+        </chakra.svg>
       ))}
     </>
   );

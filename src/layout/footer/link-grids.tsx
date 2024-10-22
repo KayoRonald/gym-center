@@ -13,9 +13,9 @@ export const LinkGrids = (props: SimpleGridProps) => {
   const { t } = useTranslation();
 
   return (
-    <SimpleGrid columns={[2, 2, 3]} {...props} spacing={{ base: "10", lg: "20" }}>
+    <SimpleGrid columns={[2, 2, 3]} {...props} gap={{ base: "10", lg: "20" }}>
       <Box maxW="150px">
-        <Stack spacing={4} align="flex-start">
+        <Stack gap={4} align="flex-start">
           <Text fontSize="lg" fontWeight="bold">
             {t("footerTop.sitemap.title")}
           </Text>
@@ -26,7 +26,7 @@ export const LinkGrids = (props: SimpleGridProps) => {
         </Stack>
       </Box>
       <Box maxW="150px">
-        <Stack spacing={4} align="flex-start">
+        <Stack gap={4} align="flex-start">
           <Text fontSize="lg" fontWeight="bold">
             {t("footerTop.support.title")}
           </Text>
@@ -35,7 +35,7 @@ export const LinkGrids = (props: SimpleGridProps) => {
         </Stack>
       </Box>
       <Box maxW="150px">
-        <Stack spacing={4} align="flex-start">
+        <Stack gap={4} align="flex-start">
           <Text fontSize="lg" fontWeight="bold">
             {t("footerTop.socialMedia.title")}
           </Text>

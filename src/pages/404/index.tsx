@@ -22,33 +22,32 @@ const Error404 = () => {
       justifyContent="center"
       h="100vh"
       textAlign="center"
-      overflow="hidden"
     >
-      <BubbleBackground />
-
-      <VStack spacing={6} zIndex={1}>
-        <HStack spacing={4}>
-          <Icon as={FaDumbbell} boxSize={8} color="teal.500" />
-          <Heading as="h1" size="4xl" color="teal.500">
+      <BubbleBackground/>
+      <VStack gap={6} zIndex={1}>
+        <HStack gap={4} color="primary.500">
+          <Icon as={FaDumbbell} boxSize={8} />
+          <Heading
+            as="h1"
+            fontSize={{ base: "4xl", md: "7xl" }}
+          >
             404
           </Heading>
-          <Icon as={FaDumbbell} boxSize={8} color="teal.500" />
+          <Icon as={FaDumbbell} boxSize={8} />
         </HStack>
-        <Heading as="h2" size="lg">
+        <Heading as="h2" size="2xl">
           {t("error404.title")}
         </Heading>
         <Text fontSize="lg" maxW="md">
           {t("error404.message")}
         </Text>
         <Button
-          as={Link}
-          to="/"
-          colorScheme="teal"
+          colorPalette={"blue"}
           size="lg"
-          _hover={{ bg: "teal.600" }}
           px={10}
+          asChild
         >
-          {t("error404.buttonText")}
+          <Link to="/">{t("error404.buttonText")}</Link>
         </Button>
       </VStack>
     </Box>

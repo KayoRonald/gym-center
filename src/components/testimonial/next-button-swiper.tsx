@@ -9,7 +9,6 @@ export const SwiperNavButtons = () => {
     <IconButton
       onClick={() => swiper.slideNext()}
       aria-label="Next testimonial"
-      icon={<FaArrowRight width={4} color="#097FD9" />}
       position="absolute"
       top="50%"
       right="-25px"
@@ -21,6 +20,8 @@ export const SwiperNavButtons = () => {
       rounded={"full"}
       w={"52px"}
       h={"52px"}
-    />
+    >
+      <FaArrowRight width={4} color="#097FD9" />
+    </IconButton>
   );
 };

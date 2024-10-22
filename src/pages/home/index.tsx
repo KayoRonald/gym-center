@@ -1,25 +1,25 @@
 import {
-  Avatar,
-  AvatarGroup,
   Box,
-  Button,
   Container,
   createIcon,
   Flex,
   Heading,
-  chakra,
   Image,
+  SimpleGrid,
+  Span,
   Stack,
   Text,
-  SimpleGrid,
 } from "@chakra-ui/react";
+
 import { Helmet } from "react-helmet-async";
-import { ExploreOrProgram } from "../../components/explore";
+import { useTranslation } from "react-i18next";
 import Card from "../../components/banner-card";
+import { ExploreOrProgram } from "../../components/explore";
+import { Newsletter } from "../../components/newsletter";
 import { PricingContent } from "../../components/table-pricing";
 import TestimonialSection from "../../components/testimonial";
-import { Newsletter } from "../../components/newsletter";
-import { useTranslation } from "react-i18next";
+import { Avatar, AvatarGroup } from "../../components/ui/avatar";
+import { Button } from "../../components/ui/button";
 
 const PlayIcon = createIcon({
   displayName: "PlayIcon",
@@ -32,14 +32,14 @@ export default function Home() {
   return (
     <>
       <Helmet title="Home" />
-      <Container maxW="6xl" px={{ base: 6, md: 3 }}>
+      <Container maxW={"6xl"} px={{ base: 6, md: 3 }}>
         <Stack
           align={"center"}
-          spacing={{ base: 8, md: 10 }}
+          gap={{ base: 8, md: 10 }}
           py={{ base: 20, md: 28 }}
           direction={{ base: "column", md: "row" }}
         >
-          <Stack flex={1} spacing={{ base: 5, md: 10 }}>
+          <Stack flex={1} gap={{ base: 5, md: 10 }}>
             <Heading
               lineHeight={1.1}
               fontWeight={600}
@@ -51,7 +51,7 @@ export default function Home() {
               {t("heroSection.description")}
             </Text>
             <Stack
-              spacing={{ base: 4, sm: 6 }}
+              gap={{ base: 4, sm: 6 }}
               direction={{ base: "column", sm: "row" }}
             >
               <Button
@@ -59,8 +59,7 @@ export default function Home() {
                 size={"lg"}
                 fontWeight={"normal"}
                 px={6}
-                bg={"primary.500"}
-                _hover={{ bg: "primary.500" }}
+                colorPalette={"blue"}
               >
                 {t("heroSection.startTrainingButton")}
               </Button>
@@ -69,9 +68,9 @@ export default function Home() {
                 size={"lg"}
                 fontWeight={"normal"}
                 px={6}
-                leftIcon={<PlayIcon h={4} w={4} color={"gray.300"} />}
                 bg={"transparent"}
               >
+                <PlayIcon h={4} w={4} color={"gray.300"} />
                 {t("heroSection.watchDemoButton")}
               </Button>
             </Stack>
@@ -84,20 +83,23 @@ export default function Home() {
             w={"full"}
           >
             <Box position={"absolute"} top={0} right={0} mb={3}>
-              <AvatarGroup size="md" max={3} mb={3}>
-                <Avatar
-                  name="Ryan Florence"
-                  src="https://bit.ly/ryan-florence"
-                />
-                <Avatar
-                  name="Segun Adebayo"
-                  src="https://bit.ly/sage-adebayo"
-                />
-                <Avatar name="Kent Dodds" src="https://bit.ly/kent-c-dodds" />
-              </AvatarGroup>
-              <chakra.span display={{ base: "none", sm: "inline-block" }}>
+              <Stack>
+                <AvatarGroup size="lg" mb={3}>
+                  <Avatar
+                    name="Ryan Florence"
+                    src="https://bit.ly/ryan-florence"
+                  />
+                  <Avatar
+                    name="Segun Adebayo"
+                    src="https://bit.ly/sage-adebayo"
+                  />
+                  <Avatar name="Kent Dodds" src="https://bit.ly/kent-c-dodds" />
+                  <Avatar fallback="+10k" />
+                </AvatarGroup>
+              </Stack>
+              <Span display={{ base: "none", sm: "inline-block" }}>
                 {t("heroSection.satisfiedCustomers")}{" "}
-              </chakra.span>
+              </Span>
             </Box>
             <Box
               height={"600px"}
@@ -122,7 +124,6 @@ export default function Home() {
       <ExploreOrProgram />
 
       <Card />
-
       <Container maxW="5xl" px={{ base: 6, md: 3 }} padding={"40px 20px"}>
         <Box
           bg="gray.700"
@@ -130,7 +131,7 @@ export default function Home() {
           px={{ base: 6, md: 8 }}
           rounded={"md"}
         >
-          <SimpleGrid columns={{ base: 1, md: 3 }} spacing={8}>
+          <SimpleGrid columns={{ base: 1, md: 3 }} gap={8}>
             <Box gridColumn={{ base: "span 1", md: "span 2" }}>
               <Text fontWeight={600} fontSize={"2xl"}>
                 {t("nutritionExperience.heading")}
@@ -141,15 +142,11 @@ export default function Home() {
               justify={{ base: "flex-start", md: "center" }}
             >
               <Button
-                bg={"primary.500"}
-                color={"white"}
                 px={8}
                 size={"lg"}
                 fontSize={"md"}
+                colorPalette={"blue"}
                 rounded={"md"}
-                _hover={{
-                  bg: "blue.700",
-                }}
               >
                 {t("nutritionExperience.joinNowButton")}
               </Button>
@@ -157,11 +154,8 @@ export default function Home() {
           </SimpleGrid>
         </Box>
       </Container>
-
       <PricingContent />
-
       <TestimonialSection />
-
       <Newsletter />
     </>
   );

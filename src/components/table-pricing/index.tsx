@@ -4,9 +4,8 @@ import { Toggle } from "./components/toggle";
 import PricingSection from "./components/section-price";
 import { useTranslation } from "react-i18next";
 
-// Corrigido para ser um componente funcional
 const PricingHeading = ({ textHeading, textSspan }: { textHeading: string; textSspan: string }) => (
-  <VStack spacing={2} textAlign="center" gap={"24px"}>
+  <VStack textAlign="center" gap={"24px"}>
     <chakra.span fontWeight={700} fontSize={"18px"} color={"primary.500"}>
       {textSspan}
     </chakra.span>

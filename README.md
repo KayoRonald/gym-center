@@ -1,40 +1,39 @@
 # Gym Center - Fitness Website
 
 <p align="center">
-    <img src="./public/banner.png" alt="nãi faço a menor ideia" />
+    <img src="./public/banner.png" alt="Banner do Gym Center" />
 </p>
-
 
 ## Visão Geral
 
-Este é um projeto de uma página de academia que ajuda usuários a encontrar o plano de fitness ideal para suas necessidades. A interface oferece funcionalidades como visualização de programas, planos de preços e depoimentos de clientes satisfeitos. Construída com **React**, **Vite**, **TypeScript**, e **Chakra UI** para garantir uma experiência de usuário moderna e fluida.
+O **Gym Center** é uma plataforma digital que conecta usuários aos melhores planos de fitness, com foco em uma experiência de usuário intuitiva e moderna. O projeto oferece uma variedade de funcionalidades, como visualização de programas de treino, planos de preços flexíveis e depoimentos inspiradores de clientes. Foi desenvolvido com **React**, **Vite**, **TypeScript** e **Chakra UI v3** para garantir uma interface fluida e responsiva.
 
-## Features
+## Funcionalidades
 
-- Programas de fitness exibidos em cards interativos.
-- Depoimentos de usuários satisfeitos em um carrossel de slides.
-- Alternância entre planos de preços mensais e anuais.
-- Seção de inscrição para receber dicas de fitness.
+- **Cards Interativos de Programas**: Visualize diferentes programas de fitness e detalhes específicos de cada plano.
+- **Carrossel de Depoimentos**: Leia histórias de sucesso de clientes satisfeitos.
+- **Alternância de Planos de Preços**: Selecione facilmente entre opções de planos mensais e anuais.
+- **Seção de Newsletter**: Inscreva-se para receber dicas exclusivas de fitness.
+
+## Tecnologias Utilizadas
+
+- **React**: Biblioteca JavaScript para construção de interfaces de usuário dinâmicas.
+- **Vite**: Ferramenta moderna de desenvolvimento frontend, garantindo tempo de construção rápido.
+- **TypeScript**: Superconjunto de JavaScript que fornece tipagem estática, ajudando a evitar erros.
+- **Chakra UI v3**: Biblioteca de componentes que segue um sistema de design flexível.
+- **Swiper.js**: Biblioteca usada para criar carrosséis de slides modernos.
 
 ## Pré-requisitos
 
-Antes de iniciar, certifique-se de ter as seguintes ferramentas instaladas em seu sistema:
+Certifique-se de ter as seguintes ferramentas instaladas:
 
 - **Node.js** (versão 18.x ou superior)
 - **npm** ou **yarn**
 - **Git**
 
-## Tecnologias Utilizadas
-
-- **React**: Biblioteca JavaScript para construção de interfaces de usuário.
-- **Vite**: Ferramenta de desenvolvimento rápida para projetos frontend.
-- **TypeScript**: Superconjunto de JavaScript que adiciona tipagem estática ao código.
-- **Chakra UI**: Biblioteca de componentes UI simples e modular, com base em design system.
-- **Swiper.js**: Biblioteca de carrossel de slides.
-
 ## Instalação
 
-Siga estas etapas para rodar o projeto localmente:
+Para rodar o projeto localmente, siga estas etapas:
 
 1. Clone o repositório:
    ```bash
@@ -60,51 +59,56 @@ Siga estas etapas para rodar o projeto localmente:
    yarn dev
    ```
 
-4. Abra o navegador e acesse:
+4. Acesse no navegador:
    ```
    http://localhost:5173
    ```
 
 ## Estrutura de Pastas
 
-Abaixo está a estrutura de pastas principal do projeto:
+A estrutura principal do projeto é a seguinte:
 
 ```
-├── public/             # Arquivos públicos
-├── src/                # Código fonte do projeto
-│   ├── assets/         # Imagens e fontes
-│   ├── components/     # Componentes reutilizáveis da UI
-│   ├── pages/          # Páginas da aplicação
-│   ├── styles/         # Estilos globais e configurações de tema do Chakra UI
-│   ├── App.tsx         # Componente principal
-│   └── main.tsx        # Arquivo de entrada
-├── .gitignore          # Arquivos a serem ignorados pelo Git
-├── index.html          # Documento HTML principal
-├── package.json        # Dependências e scripts do projeto
-└── tsconfig.json       # Configurações do TypeScript
+├── public/                  # Arquivos públicos como imagens e ícones
+├── src/                     # Código-fonte principal
+│   ├── assets/              # Recursos estáticos (imagens, fontes, etc.)
+│   ├── components/          # Componentes reutilizáveis da interface
+│   ├── layout/              # Estrutura de layout (cabeçalho, rodapé, etc.)
+│   ├── pages/               # Páginas específicas da aplicação
+│   ├── theme/               # Configurações de tema do Chakra UI v3
+│   │   ├── semantic-tokens/ # Tokens semânticos de design
+│   │   └── tokens/          # Tokens de design reutilizáveis
+│   ├── utils/               # Funções utilitárias
+│   ├── App.tsx              # Componente raiz da aplicação
+│   └── main.tsx             # Ponto de entrada do aplicativo
+├── .gitignore               # Configurações de arquivos a serem ignorados pelo Git
+├── index.html               # Arquivo HTML principal
+├── package.json             # Gerenciamento de dependências e scripts
+├── tsconfig.json            # Configurações do TypeScript
+└── vercel.json              # Configuração de implantação no Vercel
 ```
 
-## Contribuição
+## Contribuindo
 
-Se você deseja contribuir com este projeto:
+Para contribuir com o projeto:
 
-1. Crie uma _branch_:
+1. Faça um _fork_ do repositório e crie uma nova _branch_:
    ```bash
    git checkout -b minha-nova-feature
    ```
 
-2. Faça as alterações desejadas e faça um _commit_:
+2. Faça suas modificações e adicione um _commit_:
    ```bash
    git commit -m "Adiciona nova feature"
    ```
 
-3. Envie suas mudanças:
+3. Envie suas mudanças para o repositório remoto:
    ```bash
    git push origin minha-nova-feature
    ```
 
-4. Abra um _pull request_.
+4. Abra um _pull request_ para análise.
 
 ## Licença
 
-Este projeto está licenciado sob a licença **MIT**. Veja o arquivo [LICENSE](./LICENSE) para mais detalhes.
+Este projeto está licenciado sob a licença **MIT**. Consulte o arquivo [LICENSE](./LICENSE) para mais detalhes.
