@@ -112,3 +112,8 @@ Para contribuir com o projeto:
 ## Licença
 
 Este projeto está licenciado sob a licença **MIT**. Consulte o arquivo [LICENSE](./LICENSE) para mais detalhes.
+
+
+  <a href="https://skillicons.dev">
+    <img src="https://skillicons.dev/icons?i=react,ts,vite,figma" />
+  </a>
