@@ -14,7 +14,7 @@ import { SplitWithIcon } from "./list-card";
 export default function Card() {
   const { t } = useTranslation();
   return (
-    <Box as={Container} maxW={"6xl"} my={12}>
+    <Container maxW={"6xl"} my={12}>
       <SimpleGrid columns={{ base: 1, md: 2 }} gap="24px" as="article">
         <Box
           display={{ base: "none", md: "flex" }}
@@ -82,25 +82,21 @@ export default function Card() {
             </Heading>
           </Box>
           <SplitWithIcon />
-          <Group>
+          <Group maxW={'3xl'}>
             <Button
-              w={{ base: "full", sm: "auto" }}
+              w={"full"}
               bg="primary.500"
               _hover={{ bg: "primary.500" }}
               color="gray.100"
             >
               {t("ctaWithImage.joinNowButton")}
             </Button>
-            <Button
-              w={{ base: "full", sm: "auto" }}
-              bg="transparent"
-              color="gray.100"
-            >
+            <Button bg="transparent" color="gray.100">
               {t("ctaWithImage.ContactUsButton")}
             </Button>
           </Group>
         </Flex>
       </SimpleGrid>
-    </Box>
+    </Container>
   );
 }

@@ -124,7 +124,7 @@ export default function Home() {
       <ExploreOrProgram />
 
       <Card />
-      <Container maxW="5xl" px={{ base: 6, md: 3 }} padding={"40px 20px"}>
+      <Container maxW="6xl" px={{ base: 6, md: 3 }} padding={"35px 10px"}>
         <Box
           bg="gray.700"
           py={{ base: 10, md: 18 }}
